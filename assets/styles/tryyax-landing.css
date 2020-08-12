@@ -1,0 +1,41 @@
+ // custom CSS for landing page
+
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: var(--perspective);
+
+  --rotate: -30deg;
+  --rotateHover: 0deg;
+  --perspective: 500px;
+  --transitionDuration: 1s;
+  --radius: 2px;
+  --thickness: 50px;
+  --bgColor: #01060f;
+  --width: 200px;
+  --height: 150px;
+  --pagesOffset: 3px;
+}
+
+.book {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--rotate));
+  transition: var(--transitionDuration) ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book > :first-child {
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: var(--width);
+  height: var(--height);
+  transform: translateZ(calc(var(--thickness) / 2));
+  background-color: var(--bgColor);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: 5px 5px 20px #666;
+}
