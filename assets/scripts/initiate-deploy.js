@@ -28,7 +28,7 @@ form.addEventListener("submit", function (event) {
     }
     const encoded_state = btoa(JSON.stringify(data))
     url.searchParams.set('client_id', GITHUB_CLIENT_ID)
-    url.searchParams.set('scope', 'user repo')
+    url.searchParams.set('scope', 'public_repo')
     url.searchParams.set('state', encoded_state)
     url.searchParams.set(
         'redirect_uri',
