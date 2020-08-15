@@ -367,7 +367,8 @@
 
                         <!-- Radio buttons-->
                         <div class="field">
-                          <label class="label">GitHub account</label>
+                          <label class="label">GitHub</label>
+                          <p class="help">We'll store your website files on <a href="https://github.com/">GitHub</a>.</p>
                           <div>
                             <input class="is-checkradio is-small" id="github-account-yes" type="radio" name="github-account" checked="checked">
                             <label for="github-account-yes">I have a GitHub account</label>
@@ -376,12 +377,12 @@
                             <input class="is-checkradio is-small" id="github-account-no" type="radio" name="github-account">
                             <label for="github-account-no">Create a GitHub account for me</label>
                           </div>
-                          <p class="help">We'll store your website files on <a href="https://github.com/">GitHub</a>.</p>
+
                         </div>
 
                         <!-- Text input-->
                         <div class="field">
-                          <label class="label" for="repository">Give a project name</label>
+                          <label class="label" for="repository">Project name</label>
                           <div class="control">
                             <input id="repository" name="repository" type="text" placeholder="my-website" class="input is-small" required="">
                             <p class="help">A name for a new GitHub repository for your website files.</p>
@@ -390,7 +391,7 @@
 
                         <!-- Text input-->
                         <div class="field">
-                          <label class="label" for="title">Give a website title</label>
+                          <label class="label" for="title">Website title</label>
                           <div class="control">
                             <input id="title" name="title" type="text" placeholder="My.com | My Website" class="input is-small">
                             <p class="help">A title you'd like to see in search results and the browser tab.</p>
@@ -419,7 +420,7 @@
 
                         <div class="field">
                           <div class="confirmable" style="display:none">
-                            <p class="help"><a href="#" id="reset-link">Reset form</a> or click "Confirm." Yax will create a website from this template, storing the files in your GitHub account in a repository named <span id="repo-name">repo</span>. With your permission, we'll welcome you with an onboarding email at your GitHub email address.</p>
+                            <p class="help">Click "Confirm" or <a href="#" id="reset-link">reset form</a>. Yax will create a website from this template, storing the files in your GitHub account in a repository named <span id="repo-name">repo</span>. We won't access any user information or request your email address; you'll only grant permission to create a repo.</p>
                           </div>
                         </div>
                       </fieldset>
