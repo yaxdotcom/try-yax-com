@@ -32,7 +32,7 @@ form.addEventListener("submit", function (event) {
     url.searchParams.set('state', encoded_state)
     url.searchParams.set(
         'redirect_uri',
-        'https://api.yax.com/api/deploy'
+        'https://api.yax.com/api/deploy.rb'
     )
     if (!('URLSearchParams' in window)) {
         alert("Your browser does not support JavaScript URLSearchParams. Please use a newer browser.")
