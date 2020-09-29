@@ -22,7 +22,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-checkradio@1.1.1/dist/css/bulma-checkradio.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@0.3.0/dist/css/bulma-pageloader.min.css">
   <script type="module" src="https://assets.yax.com/scripts/yax-tags-library.js"></script>
-  <script async src="/assets/scripts/initiate-deploy.js"></script>
+  <script type="module" src="https://assets.yax.com/scripts/tags/yax-template-gallery.js"></script>
+  <script type="module" src="https://assets.yax.com/scripts/tags/yax-template-modal.js"></script>
   <script defer src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 </head>
 
@@ -307,138 +308,24 @@
             </section>
           </div>
           <div class="column is-6">
-            <!-- BEGIN YAX TEMPLATE  -->
-            <section class="container mt-4">
-              <div class="columns features">
-                <div class="column modal-button" data-target="modal-card">
-                  <div class="card is-shady" style="max-width:368px;">
-                    <div class="card-image">
-                      <figure class="image" style="max-width:368px;">
-                        <img src="/assets/images/yax-template-demo.png" alt="WIP Yax template">
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <div class="content">
-                        <h4>The First Yax Template</h4>
-                        <p>Nothing could be simpler.<br>Clean, standards-based HTML.</p>
-                      </div>
-                      <footer class="card-footer" style="border-top:0;">
-                        <div class="card-footer-item" style="border-right:0;">
-                          <span class="button is-link modal-button">Select</span>
-                        </div>
-                        <div class="card-footer-item">
-                          <div class="media">
-                            <div class="media-left">
-                              <figure class="image is-48x48">
-                                <img src="/assets/images/danielkehoe.jpg" alt="Daniel Kehoe avatar">
-                              </figure>
-                            </div>
-                            <div class="media-content">
-                              <p class="title is-7 has-text-grey">template by<br/>Daniel Kehoe</p>
-                            </div>
-                          </div>
-                        </div>
-                      </footer>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- Spinner to appear after form submission -->
-            <div id="spinner" class="pageloader has-background-info"><span class="title">Saving website template to GitHub</span></div>
-            <!--  =============== HERE BE MODALS ===============  -->
-            <!-- 3dFlipVertical card tiny -->
-            <div id="modal-card" class="modal modal-fx-3dSlit">
-              <div class="modal-background"></div>
-              <div class="modal-content is-tiny">
-                <!-- content -->
-                <div class="card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src="/assets/images/yax-template-demo.png" alt="WIP Yax template">
-                    </figure>
-                  </div>
-                  <div class="card-content">
-
-                    <form id="github-oauth" class="form-horizontal" action="#" method="POST">
-
-                      <!-- Template ID-->
-                      <input type="hidden" id="templateId" name="templateId" value="yax-template-demo">
-
-                      <fieldset>
-
-                        <!-- Radio buttons-->
-                        <div class="field">
-                          <label class="label">GitHub</label>
-                          <p class="help">We'll store your website files on <a href="https://github.com/">GitHub</a>.</p>
-                          <div>
-                            <input class="is-checkradio is-small" id="github-account-yes" type="radio" name="github-account" checked="checked">
-                            <label for="github-account-yes">I have a GitHub account</label>
-                          </div>
-                          <div>
-                            <input class="is-checkradio is-small" id="github-account-no" type="radio" name="github-account">
-                            <label for="github-account-no">I'll create a GitHub account</label>
-                          </div>
-
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="field">
-                          <label class="label" for="repository">Project name</label>
-                          <div class="control">
-                            <input id="repository" name="repository" type="text" placeholder="my-website" class="input is-small" required="">
-                            <p class="help">A name for a GitHub repository for your website files.</p>
-                          </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="field">
-                          <label class="label" for="title">Website title</label>
-                          <div class="control">
-                            <input id="title" name="title" type="text" placeholder="My.com | My Website" class="input is-small">
-                            <p class="help">A title you'd like to see in search results and the browser tab.</p>
-                          </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="field">
-                          <label class="label" for="description">Describe your website</label>
-                          <div class="control">
-                            <input id="description" name="description" type="text" placeholder="One line description (with some keywords)." class="input is-small">
-                            <p class="help">A description you'd like to see in search results.</p>
-                          </div>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="field">
-                          <label class="label" for="deploybutton"></label>
-                          <div class="control">
-                            <button id="deploy-button" name="deploy-button" class="button is-info" style="display:block">Deploy Now</button>
-                            <div class="confirmable" style="display:none">
-                              <a id="confirm-button" name="confirm-button" class="button is-success" href="#">Confirm</a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="field">
-                          <div class="confirmable" style="display:none">
-                            <p class="help">Click "Confirm" or <a href="#" id="reset-link">reset form</a>. Yax will create a website from this template, storing the files in your GitHub account in a repository named <span id="repo-name">repo</span>. We won't access any user information or request your email address; you'll only grant permission to create a repo.</p>
-                          </div>
-                        </div>
-                      </fieldset>
-                    </form>
-
-                  </div>
-                </div>
-              </div>
-              <!-- end content -->
-            </div>
-            <!-- END YAX TEMPLATE  -->
+            <yax-template-card
+              template_id="yaxt-demo"
+              author="the Yax team"
+              template_title="The First Yax Template"
+              description="Nothing could be simpler. Clean, standards-based HTML with on-page editing."
+              template_img="https://assets.yax.com/images/templates/yaxt-demo.png"
+              author_img="https://assets.yax.com/images/icons/yax.jpg">
+            </yax-template-card>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Spinner to appear after form submission -->
+  <div id="spinner" class="pageloader has-background-info"><span class="title">Saving website template to GitHub</span></div>
+
+  <yax-template-modal></yax-template-modal>
 
   <div class="mb-6"></div>
 
